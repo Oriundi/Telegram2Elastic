@@ -5,6 +5,7 @@ import logging
 
 LOG_LEVEL_INFO = 35
 
+
 class Writer(OutputWriter):
     def __init__(self, config: dict):
         super().__init__(config)
@@ -23,8 +24,8 @@ class Writer(OutputWriter):
                                     verify_certs=False, ssl_show_warn=False)
         # self.client = Elasticsearch(hosts=config.get("host", "localhost"))
 
-        resp = self.client.info()
-        logging.log(LOG_LEVEL_INFO, resp)
+        # resp = self.client.info()
+        # logging.log(LOG_LEVEL_INFO, resp)
 
     async def write_message(self, message):
         doc_data = await self.get_message_dict(message)
@@ -37,7 +38,7 @@ class Writer(OutputWriter):
         if "date" in doc_data:
             del doc_data["date"]
 
-        print(f'{message.id} :: {doc_data}')
+        # print(f'{message.id} :: {doc_data}')
         logging.log(LOG_LEVEL_INFO, f'{message.id} :: {doc_data}')
 
         # self.client.index(index=message.date.strftime(self.index_format), body=doc_data, id=message.id)
