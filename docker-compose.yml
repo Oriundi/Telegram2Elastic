@@ -1,0 +1,4 @@
+version: "3"
+services:
+  telegram2elastic:
+    build: git@github.com:Oriundi/Telegram2Elastic.git

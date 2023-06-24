@@ -1,4 +1,4 @@
-FROM python-3.11-bullseye
+FROM python:3.10
 
 COPY output/*.py /app/output/
 COPY requirements.txt telegram2elastic.py /app/
