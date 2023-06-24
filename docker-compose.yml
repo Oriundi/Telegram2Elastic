@@ -4,6 +4,3 @@ services:
     build: git@github.com:Oriundi/Telegram2Elastic.git
     volumes:
       - .:/app
-    ports:
-      - "9200:9200"
-
