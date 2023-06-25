@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt
 
 VOLUME /sessions
 
-ENTRYPOINT ["telegram2elastic.py"]
+ENTRYPOINT ["/app/telegram2elastic.py"]
