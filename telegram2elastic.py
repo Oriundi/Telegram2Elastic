@@ -301,7 +301,7 @@ def main():
     argument_parser = argparse.ArgumentParser(description="A simple Telegram client writing chat messages to multiple outputs in realtime")
 
     argument_parser.add_argument("--config", "-c", help="path to your config file",
-                                 default=os.getenv("CONFIG_FILE", "config.yml"))
+                                 default=os.getenv("CONFIG_FILE", "config/config.yml"))
 
     sub_command_parser = argument_parser.add_subparsers(dest="command", required=False)
 

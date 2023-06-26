@@ -1,8 +1,12 @@
 version: "3"
 services:
   telegram2elastic:
+    user: "0"
+    command: >
+        bash -c '
+          if [ x${ELASTIC_PASSWORD} == x ]; then '
     build:
       context: git@github.com:Oriundi/Telegram2Elastic.git
       dockerfile: Dockerfile
     volumes:
-      - .:/app
+      - . config :/app/config
